@@ -20,5 +20,6 @@ Implementacija:
 3. zamijeniti postojeće vlastitim implementacijama
 4. objaviti kao paket na githubu (for educational purposes)
 
-subota cilj:
-- rougly locate borders
+nedjelja cilj:
+- detect vertical edges
+- find the correct right line with hough transform
