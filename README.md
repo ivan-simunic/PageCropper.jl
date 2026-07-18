@@ -20,6 +20,5 @@ Implementacija:
 3. zamijeniti postojeće vlastitim implementacijama
 4. objaviti kao paket na githubu (for educational purposes)
 
-danas cilj:
-- sve setupiraj
-- pokreni seeded region growing i vizualiziraj rezultat
+subota cilj:
+- rougly locate borders
