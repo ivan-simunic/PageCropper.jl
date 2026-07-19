@@ -20,6 +20,6 @@ Implementacija:
 3. zamijeniti postojeće vlastitim implementacijama
 4. objaviti kao paket na githubu (for educational purposes)
 
-nedjelja cilj:
-- detect vertical edges
-- find the correct right line with hough transform
+pon cilj:
+- simplify code a bit
+- find gutter line
