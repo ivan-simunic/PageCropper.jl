@@ -20,6 +20,5 @@ Implementacija:
 3. zamijeniti postojeće vlastitim implementacijama
 4. objaviti kao paket na githubu (for educational purposes)
 
-pon cilj:
-- simplify code a bit
-- find gutter line
+uto cilj:
+- plot all 7 lines
