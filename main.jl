@@ -3,8 +3,11 @@ using ImageSegmentation
 using TestImages
 using ImageFiltering
 using Plots
+using ImageFeatures
 
-img = load("scans/slika.jpg") .|> Gray
+
+
+img = load("scans/slika.webp") .|> Gray
 function zoom_in(img)
     x, y = img.size
     segments = seeded_region_growing(img, [
@@ -198,3 +201,37 @@ midline = gutter_line(binary_img)
 
 plot_line(rough, line)
 plot_line(rough, midline)
+
+
+
+
+#= natural language algorithm description
+1. zoom in on the book (removing the background) using seeded region growing algorithm
+
+
+2. detect horizontal and vertical edges
+
+
+3. find the correct inner borders (6) and gutter
+
+
+4. visualize the result
+
+=#
+
+
+
+## implementation using high level functions
+zoomed_in = zoom_in(img)
+height, width = size(zoomed_in)
+
+vertical_edges = detect_edges(zoomed_in, "vertical")
+horizontal_edges = detect_edges(zoomed_in, "horizontal")
+
+gutter = find_gutter(vertical_edges)
+right_line = find_inner_border(vertical_edges[:, width÷2:end])
+
+##
+
+
+# implementation of functions used above (with docstrings)
